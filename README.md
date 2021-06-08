@@ -1,7 +1,14 @@
-### libuvd
-A simple library to provide support for parsing the `os-release` on any linux distrobution and also attempts to read from the `uname` routine in order to obtain the best information on the current operating system.
+## libuvd
+A simple library to provide support for parsing the `os-release` on any linux distribution that has adopted the `os-release` standard [reference](https://www.freedesktop.org/software/systemd/man/os-release.html). 
 
-### Example
+The `uname` routine is used to obtain the following information:
+1. System Name
+2. Node name
+3. Release
+4. Version
+5. Machine
+
+## Example
 ```C
     struct unix_version_t *version = get_unix_information();
 
@@ -22,7 +29,7 @@ A simple library to provide support for parsing the `os-release` on any linux di
     }
 ```
 
-### License
+## License
 libuvd is licensed under the MIT license.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
